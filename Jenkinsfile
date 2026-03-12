@@ -9,7 +9,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/arunessential/arunessential-cicd.git'
             }
         }
-
+        
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
@@ -126,13 +126,12 @@ sh 'mvn test'
 }
 
 stage('SonarQube Analysis') {
-    steps {
-        withSonarQubeEnv('SonarServer') {
-            sh 'mvn sonar:sonar'
-            
-        }
-    }
-}    
+steps {
+withSonarQubeEnv('SonarServer') {
+sh 'sonar-scanner'
+}
+}
+}
   
 stage('Upload Artifact to Nexus'){
 steps{
