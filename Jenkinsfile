@@ -40,4 +40,5 @@ stage('Docker Build') {
                 sh 'docker build -t netflix-devops:latest .'
             }
         }
- 
+    }
+}
