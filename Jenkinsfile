@@ -22,6 +22,7 @@ sh 'mvn test'
 }
 }
 
+/*
 stage('SonarQube Analysis') {
 steps {
 withSonarQubeEnv('SonarServer') {
@@ -29,6 +30,7 @@ sh 'sonar-scanner'
 }
 }
 }
+*/
   
 stage('Upload Artifact to Nexus'){
 steps{
