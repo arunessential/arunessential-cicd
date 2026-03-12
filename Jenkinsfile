@@ -1,3 +1,5 @@
+
+/*
 pipeline {
 
     agent any
@@ -38,6 +40,7 @@ pipeline {
 
     }
 }
+*/
 /*
 pipeline {
 
@@ -100,7 +103,7 @@ pipeline {
     }
 }
 */
-/*
+
 pipeline {
 
 agent any
@@ -138,13 +141,13 @@ steps{
 sh 'mvn deploy'
 }
 }
-
-stage('Docker Build'){
-steps{
-sh 'docker build -t netflix-devops .'
-}
-}
-
+stage('Docker Build') {
+            steps {
+                sh 'docker build -t netflix-devops:latest .'
+            }
+        }
+ 
+/*       
 stage('Push Image to ECR'){
 steps{
 sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR_URL>'
@@ -164,7 +167,3 @@ sh 'kubectl apply -f k8s/service.yaml'
 
 }
 */
-
-
-
-##
