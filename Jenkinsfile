@@ -6,7 +6,7 @@ stages {
 
 stage('Git Checkout'){
 steps{
-git 'https://github.com/yourrepo/netflix-clone-devops'
+git branch: 'main', url: 'https://github.com/arunessential/arunessential-cicd.git'
 }
 }
 
