@@ -12,7 +12,6 @@
 
  <name>devops-streaming</name>
 
- <distributionManagement>
 
   <repository>
    <id>nexus-releases</id>
@@ -26,7 +25,6 @@
    <url>http://44.193.205.51:8081/repository/arunessential-CICD/</url>
   </snapshotRepository>
 
- </distributionManagement>
 
 </project>
 <!--
