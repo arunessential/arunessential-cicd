@@ -1,3 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+ http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+ <modelVersion>4.0.0</modelVersion>
+
+ <groupId>com.netflix</groupId>
+ <artifactId>devops-streaming</artifactId>
+ <version>1.0</version>
+ <packaging>jar</packaging>
+
+ <name>devops-streaming</name>
+
+ <distributionManagement>
+
+  <repository>
+   <id>nexus-releases</id>
+   <name>Nexus Releases</name>
+   <url>http://44.193.205.51:8081/repository/arunessential-CICD/</url>
+  </repository>
+
+  <snapshotRepository>
+   <id>nexus-snapshots</id>
+   <name>Nexus Snapshots</name>
+   <url>http://44.193.205.51:8081/repository/arunessential-CICD/</url>
+  </snapshotRepository>
+
+ </distributionManagement>
+
+</project>
+<!--
+/*
 <distributionManagement>
 
     <repository>
@@ -13,7 +46,7 @@
     </snapshotRepository>
 
 </distributionManagement>
-
+-->
 <!--
 <distributionManagement>
     <repository>
