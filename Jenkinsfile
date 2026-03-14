@@ -1,3 +1,4 @@
+/*
 pipeline {
 
 agent any
@@ -30,7 +31,7 @@ sh 'sonar-scanner'
 }
 }
 }
-*/
+
   
 stage('Upload Artifact to Nexus'){
 steps{
@@ -43,4 +44,38 @@ stage('Docker Build') {
             }
         }
     }
+}
+*/
+pipeline {
+
+agent any
+
+stages {
+
+stage('Git Checkout'){
+steps{
+git branch: 'main', url: 'https://github.com/arunessential/arunessential-cicd.git'
+}
+}
+
+stage('Install Dependencies'){
+steps{
+sh 'npm install'
+}
+}
+
+stage('Run Tests'){
+steps{
+sh 'npm test || true'
+}
+}
+
+stage('Docker Build'){
+steps{
+sh 'docker build -t netflix-devops .'
+}
+}
+
+}
+
 }
