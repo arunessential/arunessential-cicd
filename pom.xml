@@ -14,13 +14,13 @@
 
    <id>nexus-releases</id>
    <name>Nexus Releases</name>
-   <url>http://44.193.205.51:8081/repository/arunessential-CICD/</url>
+   <url>http://13.218.186.73:8081/repository/arunessential-CICD/</url>
   
 
   <snapshotRepository>
    <id>nexus-snapshots</id>
    <name>Nexus Snapshots</name>
-   <url>http://44.193.205.51:8081/repository/arunessential-CICD/</url>
+   <url>http://13.218.186.73:8081/repository/arunessential-CICD/</url>
   </snapshotRepository>
 
 
